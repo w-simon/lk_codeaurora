@@ -32,6 +32,8 @@
  #define CACHE_LINE 32
 #elif defined(ARM_CPU_CORE_A5)
  #define CACHE_LINE 32
+#elif defined(ARM_CPU_CORTEX_A8)
+ #define CACHE_LINE 32
 #elif defined(ARM_CPU_CORE_SCORPION)
  #define CACHE_LINE 32
 #elif defined(ARM_CPU_CORE_KRAIT) || defined(ARM_CPU_CORE_A7)

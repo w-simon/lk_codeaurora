@@ -16,6 +16,8 @@ MODULES += \
 	app/tests \
 	app/shell
 
+DEFINES += LPAE=0
+
 # extra rules to copy the armemu.conf file to the build dir
 #$(BUILDDIR)/armemu.conf: $(LOCAL_DIR)/armemu.conf
 #	@echo copy $< to $@

@@ -1,8 +1,10 @@
 LOCAL_DIR := $(GET_LOCAL_DIR)
 
 ARCH := arm
-ARM_CPU := arm926ej-s
+ARM_CPU ?= cortex-a8
 CPU := generic
+
+WITH_SMP ?= 1
 
 INCLUDES += \
 	-I$(LOCAL_DIR)/include
@@ -18,8 +20,7 @@ OBJS += \
 
 #	$(LOCAL_DIR)/console.o \
 
-MEMBASE ?= 0x0
-MEMSIZE ?= 0x08000000	# 128MB
+KERNEL_LOAD_OFFSET := 0x100000 # 1MB
 
 LINKER_SCRIPT += \
 	$(BUILDDIR)/system-onesegment.ld
